@@ -21,7 +21,7 @@
 #' Oxford University Press, Oxford, New York\cr
 #' \url{https://global.oup.com/academic/product/empirical-methods-in-short-term-climate-prediction-9780199202782?cc=de&lang=en&}
 #' 
-#' @exportClass EOTmode
+#' @exportClass EotMode
 #' @export
 fast.eot = function (x, n = 1, standardised,n_cores = parallel::detectCores()-1, verbose = T)
 {
