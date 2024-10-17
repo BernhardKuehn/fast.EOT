@@ -114,13 +114,27 @@ fast.eot = function (x, n = 1, standardised,n_cores = parallel::detectCores()-1,
   mode(location.df$x) <- "numeric"
   mode(location.df$y) <- "numeric"
   mode(location.df$cum_expl_var) <- "numeric"
-  out <- methods::new("EotMode", mode = as.integer(it),
+  out <- methods::new("EotMode", 
+                      mode = as.integer(it),
              name = paste("mode", sprintf("%02.f",it), sep = "_"),
-             eot = eot.ts, coords_bp = xy, cell_bp = maxxy,
-             cum_exp_var = cum.expl.var, r_predictor = rst.x.r, rsq_predictor = rst.x.rsq,
-             #rsq_sums_predictor = rst.x.rsq.sums,
+             eot = eot.ts, 
+             coords_bp = xy, 
+             cell_bp = maxxy,
+             cum_exp_var = cum.expl.var,
+             r_predictor = rst.x.r,
+             rsq_predictor = rst.x.rsq,
+             rsq_sums_predictor = rst.x.rsq.sums,
              int_predictor = rst.x.intercept,
-             slp_predictor = rst.x.slp, p_predictor = rst.x.p, resid_predictor = rst.x.resids)
+             slp_predictor = rst.x.slp,
+             p_predictor = rst.x.p,
+             resid_predictor = rst.x.resids,
+             r_response = rst.y.r,
+             rsq_response = rst.y.rsq,
+             int_response = rst.y.intercept, 
+             slp_response = rst.y.slp,
+             p_response = rst.y.p,
+             resid_response = rst.y.resids
+             )
   if(n > 1){
     # calculate more EOTs based on the remaining residuals
     y.vals_noNA = t(y.resids)
