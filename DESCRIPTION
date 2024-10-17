@@ -6,7 +6,7 @@ Authors@R: person(given = "Bernhard",
 		  email = "bernhard.kuehn@thuenen.de",
 		  role = c("aut","cre"))
 Description: Faster way (parallelized) to calculate EOTs (Empirical orthogonal teleconnections) building on the 'remote' package.
-License: GPL-3
+License: GPL-3 + file LICENSE
 Encoding: UTF-8
 LazyData: false
 Roxygen: list(markdown = TRUE)
@@ -14,6 +14,7 @@ RoxygenNote: 7.3.2
 LinkingTo: Rcpp
 Depends: R (>= 4.0)
 Imports: Rcpp,
+	 methods,
 	 raster,
 	 foreach,
    	 parallel,

@@ -15,6 +15,7 @@ fastCor_parallel_compute = function(X,Y,n_cores = parallel::detectCores()) {
   # Register parallel backend
   doParallel::registerDoParallel(cl)
   # Compute estimates
+  i <- NULL
   estimates = foreach::foreach(i = 1:nrow(X), # Perform n simulations
                                .combine = "rbind",           # Combine results
                                # Self-load
