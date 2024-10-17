@@ -31,17 +31,17 @@ representation(mode = 'integer',
                cum_exp_var = 'numeric',
                r_predictor = 'RasterLayer',
                rsq_predictor = 'RasterLayer',
-               rsq_sums_predictor = 'RasterLayer',
+               rsq_sums_predictor = 'RasterBrick',
                int_predictor = 'RasterLayer', 
                slp_predictor = 'RasterLayer',
                p_predictor = 'RasterLayer',
-               resid_predictor = 'RasterLayer',
+               resid_predictor = 'RasterBrick',
                r_response = 'RasterLayer',
                rsq_response = 'RasterLayer',
                int_response = 'RasterLayer', 
                slp_response = 'RasterLayer',
                p_response = 'RasterLayer',
-               resid_response = 'RasterLayer')
+               resid_response = 'RasterBrick')
 )
 #' @export
 fast.eot = function (x, n = 1, standardised,n_cores = parallel::detectCores()-1, verbose = T)
