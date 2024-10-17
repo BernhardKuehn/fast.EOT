@@ -1,0 +1,21 @@
+Package: fast.EOT
+Title: Faster way to calculate EOTs (Empirical orthogonal teleconnections)
+Version: 0.1
+Authors@R: person(given = "Bernhard",
+		  family =  "Kuehn",
+		  email = "bernhard.kuehn@thuenen.de",
+		  role = c("aut","cre"))
+Description: Faster way (parallelized) to calculate EOTs (Empirical orthogonal teleconnections) building on the 'remote' package.
+License: GPL-3
+Encoding: UTF-8
+LazyData: false
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.3.2
+LinkingTo: Rcpp
+Depends: R (>= 4.0)
+Imports: Rcpp,
+	 raster,
+	 foreach,
+   	 parallel,
+	 doParallel
+

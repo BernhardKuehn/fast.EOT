@@ -1,0 +1,5 @@
+useDynLib(fast.EOT)
+importFrom(Rcpp, sourceCpp)
+export(fast.eot)
+importFrom(foreach,"%dopar%")
+
