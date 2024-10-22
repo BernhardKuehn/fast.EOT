@@ -18,5 +18,8 @@ Imports: Rcpp,
 	 raster,
 	 foreach,
    	 parallel,
-	 doParallel
+	 doParallel,
+	 grDevices, 
+	 RColorBrewer,
+	 graphics
 
