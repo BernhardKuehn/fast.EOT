@@ -19,9 +19,9 @@ plot.eot = function(eot.out,n,type = "regression weights"){
   EOTs_temporal = sapply(eot.out,function(x) x@eot)
   # get spatial pattern (= slope or regression weights/R2)
   if(type == "regression weights"){
-  EOTs_spatial = brick(lapply(eot.out,function(x) x@slp_predictor))
+  EOTs_spatial = raster::brick(lapply(eot.out,function(x) x@slp_predictor))
   } else if(type == "R2"){
-    EOTs_spatial = brick(lapply(eot.out,function(x) x@rsq_predictor))
+    EOTs_spatial = raster::brick(lapply(eot.out,function(x) x@rsq_predictor))
   } else{
     stop("'type' must be specified as either 'regression weights' or 'R2'!")
   }
@@ -48,7 +48,7 @@ plot.eot = function(eot.out,n,type = "regression weights"){
   } else {
   mat = tmp
   }
-  layout(mat,
+  graphics::layout(mat,
          height = rep(c(1.5,1),nrow(mat)/2))
   
   for (i in 1:n) {
@@ -59,12 +59,12 @@ plot.eot = function(eot.out,n,type = "regression weights"){
       terra::contour(x = EOTs_spatial[[i]], add = TRUE, 
                      col = "gray30",labcex = 0.8,vfont = c("sans serif","bold"))
       # add point of eot ts
-      points(eot.out[[i]]@coords_bp,pch = 24,bg = "deeppink4",cex = 1.1,
+      graphics::points(eot.out[[i]]@coords_bp,pch = 24,bg = "deeppink4",cex = 1.1,
              col = "wheat")
       maps::map(add = TRUE, fill = TRUE, col = "gray90")
     graphics::box()
     graphics::title(paste0("EOT", i),adj = 0)
-    mtext("lon",side = 1,line = 1.5,cex = 0.8)
+    graphics::mtext("lon",side = 1,line = 1.5,cex = 0.8)
     # add time series
     plot(EOTs_temporal[,i],type = "l",xlab = "year",
          ylab = "",las = 1)    

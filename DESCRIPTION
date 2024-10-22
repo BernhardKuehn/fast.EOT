@@ -16,6 +16,8 @@ Depends: R (>= 4.0)
 Imports: Rcpp,
 	 methods,
 	 raster,
+	 maps, 
+	 terra,
 	 foreach,
    	 parallel,
 	 doParallel,
