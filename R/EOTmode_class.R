@@ -1,0 +1,22 @@
+#' @export
+setClass("EotMode",
+         representation(mode = 'integer',
+                        name = 'character',
+                        eot = 'numeric',
+                        coords_bp = 'matrix',
+                        cell_bp = 'integer',
+                        cum_exp_var = 'numeric',
+                        r_predictor = 'RasterLayer',
+                        rsq_predictor = 'RasterLayer',
+                        rsq_sums_predictor = 'RasterBrick',
+                        int_predictor = 'RasterLayer', 
+                        slp_predictor = 'RasterLayer',
+                        p_predictor = 'RasterLayer',
+                        resid_predictor = 'RasterBrick',
+                        r_response = 'RasterLayer',
+                        rsq_response = 'RasterLayer',
+                        int_response = 'RasterLayer', 
+                        slp_response = 'RasterLayer',
+                        p_response = 'RasterLayer',
+                        resid_response = 'RasterBrick')
+)

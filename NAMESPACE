@@ -1,7 +1,6 @@
 useDynLib(fast.EOT)
 importFrom(Rcpp, sourceCpp)
 export(fast.eot)
-export(plot.eot)
+export(plot_eot)
 exportClasses(EotMode)
 importFrom(foreach,"%dopar%")
-
