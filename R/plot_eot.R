@@ -12,7 +12,7 @@
 #' or squared correlation coefficient per grid cell with \code{"R2"}. 
 
 #' @export
-plot.eot = function(eot.out,n,type = "regression weights"){
+plot_eot = function(eot.out,n,type = "regression weights"){
   opar = graphics::par(no.readonly = TRUE)
   on.exit(graphics::par(opar))
   # get eot time series
