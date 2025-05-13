@@ -1,6 +1,6 @@
 # fast.EOT
 Fast version (parallelized) to calculate EOTs (Empirical orthogonal functions) in _R_.
-It is based on the 'eof' function from [`remote`](https://cran.r-project.org/package=remote), 
+It is based on the 'eot' function from [`remote`](https://cran.r-project.org/package=remote), 
 which already utilises efficient _C++_ code, but implements an additional parallelization step,
 making the calculation of EOTs approximately 7x faster. Currently 'fast.EOT' only calculates 
 the EOTs of a single spatio-temporal field, contrary to the 'eot' function in 'remote', which 
